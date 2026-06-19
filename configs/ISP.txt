@@ -1,1 +1,11 @@
-
+enable
+configure terminal
+hostname ISP
+interface Ethernet0/0
+ ip address 10.24.15.2 255.255.255.252
+ no shutdown
+interface Ethernet0/1
+ ip address 10.24.15.5 255.255.255.252
+ no shutdown
+ip route 192.168.24.0 255.255.255.0 10.24.15.1
+ip route 192.168.15.0 255.255.255.0 10.24.15.6
